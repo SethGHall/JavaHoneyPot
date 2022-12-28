@@ -55,7 +55,7 @@ public class HoneyPotController {
                 System.out.println("The connected client finally gave up ");
             }
         };
-        //create header for the response, set response entity with header and streaming response body
+        //create header for the response, set content type and set response entity with header and streaming response body
         HttpHeaders header = new HttpHeaders();
         header.set(HttpHeaders.CONTENT_TYPE, MediaType.TEXT_EVENT_STREAM_VALUE);
         ResponseEntity<StreamingResponseBody> responseEntity = new ResponseEntity<>(body, header, 200);
